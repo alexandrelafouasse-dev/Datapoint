@@ -1,0 +1,73 @@
+.tool_preview{
+  z-index: 100;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 19px -1px rgba(0,0,0,0.75);
+  padding: 3%;
+
+  height: 32vh;
+  width: 40vw;
+
+  position: absolute;
+  top: 15%;
+  left: 30%;
+
+  display: none;
+}
+
+.tool_preview > h2{
+  color: rgba(117, 181, 232);
+  font-weight: normal;
+  font-size: 40px;
+
+  margin-bottom: 5%;
+}
+
+.tool_preview > p{
+  font-size: 20px;
+  color: grey;
+}
+
+.p2{
+  font-weight: bold;
+  margin-bottom: 10%;
+}
+
+.go_mail{
+  border: 1px solid rgba(117, 181, 232);
+  background-color: rgba(117, 181, 232, 0.7);
+  height: 10%;
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.go_livret{
+  border: 1px solid rgba(250, 219, 143);
+  background-color: rgba(250, 219, 143, 0.7);
+  height: 10%;
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.go_sport{
+  border: 1px solid rgba(219, 107, 107);
+  background-color: rgba(219, 107, 107, 0.7);
+  height: 10%;
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}

@@ -1,0 +1,170 @@
+a{
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tab_content{
+  padding: 2%;
+}
+
+.messenger{
+  display: flex;
+  height: 100%;
+}
+
+.messenger_conv{
+  width: 30%;
+  height: 90%;
+  border-right: 1px solid lightgrey;
+
+  padding-top: 3%;
+}
+
+.messenger_conv div {
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+}
+
+.messenger_conv ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.messenger_conv li{
+  padding-left: 10%;
+}
+
+.messenger_conv li.active{
+  background-color: lightgrey;
+}
+
+
+.messenger_conv > ul > li > a > div > img{
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 10%;
+}
+
+.blue_circle{
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50%;
+  background-color: rgba(103, 189, 232);
+
+    margin-right: 10%;
+}
+
+.messenger_conv > div > p{
+  font-size: 20px;
+  color: grey;
+  font-weight: bold;
+}
+
+.messenger_main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  height: 100%;
+  max-width: 70%;
+}
+
+.messenger_main h2{
+  margin-bottom: 10%;
+}
+
+/* Messages */
+#main_RH > div{
+  margin-bottom: 2%;
+  padding: 2%;
+  max-width: 51%;
+  border-radius: 5px;
+}
+
+#main_welcome > div{
+  margin-bottom: 2%;
+  padding: 2%;
+  max-width: 51%;
+  border-radius: 5px;
+}
+
+.profile{
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.messenger_main_recieved{
+  display: flex;
+  align-items: center;
+
+  float: left;
+  background-color: rgba(212, 212, 212, 0.5);
+  width: 51% !important;
+  margin-bottom: 3%;
+
+  animation: fadeEffect 0.5s;
+}
+
+.messenger_main_sent{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+  background-color: rgba(103, 189, 232, 0.5);
+
+  margin-left: 60%;
+  animation: fadeEffect 0.5s;
+}
+
+.msg{
+  margin-right: 2%;
+}
+
+.sent_message{
+  float: left;
+  color: white;
+}
+
+/**/
+
+.messenger_main_footer{
+  position: absolute;
+  bottom: 10px;
+  width: 95%;
+  height: 4%;
+
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+}
+
+textarea{
+  width: 99%;
+  resize: none;
+  outline: none;
+  background: rgba(212, 212, 212, 0.5);
+  margin-right: 3%;
+  font-size: 14px;
+  border-radius: 7px;
+  border: none;
+}
+
+.messenger_main_footer > button{
+  background-color: rgba(103, 189, 232, 0.7);
+  border: rgba(103, 189, 232);
+  color: white;
+  width: 15%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 7px;
+}

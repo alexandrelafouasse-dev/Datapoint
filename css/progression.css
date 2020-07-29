@@ -1,0 +1,105 @@
+.integration{
+  z-index: 100;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 19px -1px rgba(0,0,0,0.4);
+
+  height: 70vh;
+  width: 50vw;
+
+  position: absolute;
+  top: 10%;
+  left: 30%;
+
+  display: none;
+}
+
+.hasAppeared{
+  display: block;
+  animation: fadeEffect 0.5s;
+}
+
+
+.integration_title{
+  position: relative;
+  top: 2%;
+  left: 2%;
+
+  margin-bottom: 6%;
+}
+
+.integration_levels{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.levels_title{
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.levels_label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.levels_label > p{
+  color: grey;
+}
+
+.levels{
+  height: 30px !important;
+  border-radius: 13px !important;
+}
+
+.integration_progress:after{
+  background-image: linear-gradient(to right, rgba(49,102,137), rgba(117,181,233)); !important;
+}
+
+
+/* Objectifs */
+.integration_objectives{
+  position: relative;
+  left: 5%;
+}
+
+.objectives_title{
+  position: relative;
+  left: 2%;
+}
+
+.objectives_list{
+  position: relative;
+  left: 5%;
+}
+
+.objectives_list ul{
+  padding: 10px;
+}
+
+.objectives_list li{
+  padding: 2%;
+  list-style: none;
+  color: grey;
+  font-size: 20px;
+}
+
+.progress_checkbox{
+  margin-right: 2%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -border-radius: 4px;
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border: 1px solid rgba(117, 181, 232);
+}
+
+.progress_checkbox:checked {
+  background: rgba(117, 181, 232, 0.5);
+  position: relative;
+}

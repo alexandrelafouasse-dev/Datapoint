@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FT2 - One point</title>
+  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/checkbox.css">
+  <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./css/waves.css">
+  <link rel="stylesheet" href="./css/messenger.css">
+  <link rel="stylesheet" href="./css/progression.css">
+  <link rel="stylesheet" href="./css/tool_preview.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="black"></div>
+
+  <!-- Logo Datapoint et Onepoint -->
+
+  <a href="https://www.groupeonepoint.com/" target="_blank"><img class="logoSite" src="./img/logo.png" alt=""></a>
+
+  <header>
+    <img class="logoData" src="./img/data.png" alt="">
+
+    <div class="dashboard_profile">
+      <img src="./img/team/alex.jpg" alt="" class="profilePic">
+
+      <div class="profile_name">
+        <p>ALEXANDRE <span class="bold">LAFOUASSE</span></p>
+        <p class="profile_name_job">DEVELOPPEUR BACK END</p>
+      </div>
+    </div>
+
+    <div class="progress_bar">
+      <p class="progress_bar_title">DEBUTANT</p>
+      <div class="meter" style="width: 100%;">
+        <span style="width: 50%;"></span>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button class="tablinks" onclick="openPage(event, 'Home')" id="defaultOpen">
+        <div class="toolbar_home">
+          <img src="img/icons/ACCUEIL.png" alt="">
+          <p>ACCUEIL</p>
+        </div>
+      </button>
+
+      <button class="tablinks" onclick="openPage(event, 'Team')">
+        <div class="toolbar_team">
+          <img src="img/icons/TEAM.png" alt="">
+          <p>MA TEAM ONEPOINT</p>
+        </div>
+      </button>
+
+      <button class="tablinks" onclick="openPage(event, 'Places')">
+        <div class="toolbar_places">
+          <img src="img/icons/LIEUX.png" alt="">
+          <p>LIEUX DE VIE</p>
+        </div>
+      </button>
+
+      <button class="tablinks" onclick="openPage(event, 'Tools')"  >
+        <div class="toolbar_tools">
+          <img src="img/icons/OUTILS.png" alt="">
+          <p>OUTILS</p>
+        </div>
+      </button>
+
+      <button class="tablinks" onclick="openPage(event, 'Mail')">
+        <div class="toolbar_mail">
+          <img src="img/icons/MESSAGERIE.png" alt="">
+          <p>MESSAGERIE</p>
+          <div class="mail_notification">1</div>
+        </div>
+      </button>
+
+    </div>
+  </header>
+
+  <div class="search"></div>
+
+
+  <!-- Ecran d'accueil -->
+  <div id="Home" class="tabcontent">
+
+    <div class="widgets">
+
+      <div class="widgets_workforce">
+        <h2><span class="blue">EFFECTIF</span> TOTAL</h2>
+        <p class="widgets_workforce_number blue">3489</p>
+        <p class="widgets_workforce_text">salariés</p>
+        <p class="widgets_workforce_legend">Évolution déterminée par rapport au mois dernier</p>
+      </div>
+
+      <div class="widgets_parity">
+        <h2><span class="blue">PARITÉ</span> DE L'ENTREPRISE</h2>
+        <div class="parity_chart">
+          <canvas id="widgets_parity_chart"></canvas>
+        </div>
+      </div>
+
+      <div class="widgets_workforce">
+        <h2>TOTAL DES<span class="blue"> PARTIES JOUÉES AU LOFT</span></h2>
+        <p class="widgets_workforce_number blue">678</p>
+        <p class="widgets_workforce_text">parties</p>
+        <p class="widgets_workforce_legend">Total des parties comptabilisées depuis le mois dernier</p>
+      </div>
+
+    </div>
+
+    <div class="chart">
+
+      <div class="select-style">
+        <select name="" id="choice1">
+          <option value="parite">Parité</option>
+          <option value="age">Âge</option>
+          <option value="effectif">Effectif</option>
+        </select>
+      </div>
+
+      <div class="select-style2">
+        <select name="" id="choice2">
+          <option value="metier">le métier</option>
+          <option value="comm_metier">les comm métier</option>
+          <option value="poste">le poste</option>
+          <option value="comm_service">les comm services</option>
+        </select>
+      </div>
+
+      <h2 class="between_select">selon</h2>
+
+      <div class="chart_container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+  <!-- -->
+
+
+  <!-- Mon intégration chez One Point -->
+  <div class="integration">
+    <h2 class="integration_title"><span class="blue">MON INTÉGRATION</span> CHEZ ONE POINT</h2>
+
+    <div class="integration_levels">
+      <div class="levels_label">
+        <p class="levels_label_min">DÉBUTANT</p>
+        <p class="levels_label_max">INTÉGRÉ !</p>
+      </div>
+
+      <div class="meter levels" style="width: 100%;">
+        <span class="integration_progress" style="width: 50%;"></span>
+      </div>
+    </div>
+
+
+
+    <div class="integration_objectives">
+      <h2 class="objectives_title">MES<span class="blue"> OBJECTIFS</span></h2>
+
+      <div class="objectives_list">
+        <ul>
+          <li><input class="progress_checkbox"type="checkbox" /><span>Découvrir tous les onglets de Datapoint</span></li>
+          <li><input class="progress_checkbox" type="checkbox" /><span>Premier mail envoyé</span></li>
+          <li><input class="progress_checkbox" type="checkbox" /><span>Visite médicale</span></li>
+          <li><input class="progress_checkbox" type="checkbox" /><span>Premier café</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- -->
+
+
+
+  <!-- La Team One Point -->
+  <div id="Team" class="tabcontent">
+    <div id="container">
+    	<div class="inner-container">
+    		<div class="toggle">
+    			<p>LA TEAM</p>
+    		</div>
+    		<div class="toggle">
+    			<p>MA TEAM</p>
+    		</div>
+    	</div>
+    	<div class="inner-container" id='toggle-container'>
+    		<div class="toggle">
+    			<p>LA TEAM</p>
+    		</div>
+    		<div class="toggle">
+    			<p>MA TEAM</p>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="other-content">
+
+    <div class="mateam">
+      <h2 class="content_title"><span class="yellow">MA TEAM</span> ONE POINT</h2>
+      <div class="team-container firstline">
+        <div class="person person1">
+          <div class="img-container person1_profilePic">
+            <img src="./img/team/victor.jpg">
+          </div>
+          <p class="person_name">VICTOR <span class="bold">LOUZON</span></p>
+          <p class="person_job">ASSOCIATE</p>
+        </div>
+
+        <div class="person person2">
+          <div class="img-container person2_profilePic">
+            <img src="./img/team/emma.jpg" alt="">
+          </div>
+          <p class="person_name">EMMA <span class="bold">COLIN</span></p>
+          <p class="person_job">LEADER</p>
+        </div>
+
+        <div class="person person3">
+          <div class="img-container person3_profilePic">
+            <img src="./img/team/jenn.jpg" alt="">
+          </div>
+          <p class="person_name">JENNIFER <span class="bold">LAM</span></p>
+          <p class="person_job">PARTNER</p>
+        </div>
+      </div>
+
+      <div class="team-container secondline">
+        <div class="person4">
+          <div class="img-container person4_profilePic">
+            <img src="./img/team/yoann.jpg"  onmouseover="this.src='./img/icons/team_hover.png'" onmouseout="this.src='./img/team/yoann.jpg'"/>
+          </div>
+          <p class="person_name">YOANN <span class="bold">PENSIVY</span></p>
+          <p class="person_job">DÉVELOPPEUR FRONT END</p>
+        </div>
+
+        <div class="person5">
+          <div class="img-container person5_profilePic">
+            <img src="./img/team/alex.jpg" alt="">
+          </div>
+          <p class="person_name">ALEXANDRE <span class="bold">LAFOUASSE</span></p>
+          <p class="person_job">DÉVELOPPEUR BACK END</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lateam">
+
+      <h2 class="content_title"><span class="blue">LA TEAM</span> ONE POINT</h2>
+
+      <div class="team-container firstline">
+        <div class="person person1">
+          <div class="img-container person1_profilePic">
+            <img src="./img/team/mathias.png">
+          </div>
+          <p class="person_name">MATHIAS <span class="bold">DE MAGALAHAES</span></p>
+          <p class="person_job">RESPONSABLE PÔLE DESIGN</p>
+        </div>
+
+        <div class="person person2">
+          <div class="img-container person2_profilePic">
+            <img src="./img/team/laura.png" alt="">
+          </div>
+          <p class="person_name">LAURA <span class="bold">KICI</span></p>
+          <p class="person_job">RESPONSABLE PÔLE TECH</p>
+        </div>
+
+        <div class="person person3">
+          <div class="img-container person3_profilePic">
+            <img src="./img/team/lucas.png" alt="">
+          </div>
+          <p class="person_name">LUCAS <span class="bold">CIRROTEAU</span></p>
+          <p class="person_job">RESPONSABLE PÔLE MARKETING</p>
+        </div>
+      </div>
+
+      <div class="team-container secondline">
+        <div class="person person2">
+          <div class="img-container person2_profilePic">
+            <img src="./img/team/anouk.png" alt="">
+          </div>
+          <p class="person_name">ANOUK <span class="bold">FENDRIKOFF</span></p>
+          <p class="person_job">DRH</p>
+        </div>
+
+        <div class="person4">
+          <div class="img-container person4_profilePic">
+            <img src="./img/team/hugo.png" />
+          </div>
+          <p class="person_name">HUGO <span class="bold">MONAT</span></p>
+          <p class="person_job">RESPONSABLE RH</p>
+        </div>
+
+          </div>
+
+      <div class="team-container thirdline">
+        <div class="person person1">
+          <div class="img-container person1_profilePic">
+            <img src="./img/team/martin.png">
+          </div>
+          <p class="person_name">MARTIN <span class="bold">CALLONNEC</span></p>
+          <p class="person_job">UX DESIGNER</p>
+        </div>
+
+
+        <div class="person5">
+          <div class="img-container person5_profilePic_alt">
+            <img src="./img/team/alex.jpg" alt="">
+          </div>
+          <p class="person_name">ALEXANDRE <span class="bold">LAFOUASSE</span></p>
+          <p class="person_job">DÉVELOPPEUR BACK END</p>
+        </div>
+
+        <div class="person person3">
+          <div class="img-container person3_profilePic">
+            <img src="./img/team/clement.png" alt="">
+          </div>
+          <p class="person_name">CLÉMENT <span class="bold">LEGRAND</span></p>
+          <p class="person_job">DATA ANALYST</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- Les Lieux de vie -->
+  <div id="Places" class="tabcontent">
+    <div class="other-content">
+            <h2 class="content_title"><span class="blue">AUTOUR DE </span> ONE POINT</h2>
+            <h3 class="content_undertitle">Trouvez des restaurants, des bars, des banques et plus encore...</h3>
+            <div class="places_map">
+      <iframe class="iframe_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6594124363587!2d2.2805498158568747!3d48.8647047082158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67aed7b521af1%3A0xcca798aeb9c846a6!2sonepoint!5e0!3m2!1sfr!2sfr!4v1545041780805" width="1100" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Les outils One Point -->
+  <div id="Tools" class="tabcontent ">
+    <div class="other-content slideshow">
+
+      <div class="slideitem">
+      <h2 class="content_title"><span class="blue">LES OUTILS</span> ONE POINT</h2>
+      <h3 class="content_undertitle">Familiarisez vous avec les outils One Point</h3>
+
+      <div class="team-container firstline">
+        <div>
+          <div class="tool_icon mail_button">
+            <img src="./img/icons/mail.png" alt="">
+          </div>
+          <p class="tool_name">Mail</p>
+        </div>
+
+        <div>
+          <div class="tool_icon">
+            <img src="./img/icons/calendrier.png" alt="">
+          </div>
+          <p class="tool_name">Agenda</p>
+        </div>
+
+        <div>
+          <div class="tool_icon">
+            <img src="./img/icons/slack.png" alt="">
+          </div>
+          <p class="tool_name">Slack</p>
+        </div>
+      </div>
+      <div class="team-container secondline">
+        <div>
+          <div class="tool_icon">
+            <img src="./img/icons/drive.png" alt="">
+          </div>
+          <p class="tool_name">Drive</p>
+        </div>
+
+        <div>
+          <div class="tool_icon">
+            <img src="./img/icons/SIRH.png" alt="">
+          </div>
+          <p class="tool_name">SIRH</p>
+        </div>
+      </div>
+
+      </div>
+
+          <div class="slideitem">
+            <h2 class="content_title"><span class="yellow">LA DOCUMENTATION</span> ONE POINT</h2>
+            <h3 class="content_undertitle">Découvrez et téléchargez les documents utiles de One Point</h3>
+
+            <div class="team-container firstline">
+              <div>
+                <div class="doc_icon livret_button">
+                  <img src="./img/icons/livret accueil.png" alt="">
+                </div>
+                <p class="tool_name">Livret d'accueil</p>
+              </div>
+
+              <div>
+                <div class="doc_icon">
+                  <img src="./img/icons/documents.png" alt="">
+                </div>
+                <p class="tool_name">Réglement de One Point</p>
+              </div>
+
+              <div>
+                <div class="doc_icon">
+                  <img src="./img/icons/documents.png" alt="">
+                </div>
+                <p class="tool_name">Réglement des locaux</p>
+              </div>
+            </div>
+            <div class="team-container secondline">
+              <div>
+                <div class="doc_icon">
+                  <img src="./img/icons/plan locaux.png" alt="">
+                </div>
+                <p class="tool_name">Plan des locaux</p>
+              </div>
+
+              <div>
+                <div class="doc_icon">
+                  <img src="./img/icons/santé.png" alt="">
+                </div>
+                <p class="tool_name">Santé et sécurité</p>
+              </div>
+            </div>
+       </div>
+
+       <div class="slideitem">
+         <h2 class="content_title"><span class="purple">LES INFOS PRATIQUES</span> ONE POINT</h2>
+         <h3 class="content_undertitle">Explorez l'écosystème One Point et bénéficiez d'avantages</h3>
+
+         <div class="team-container firstline">
+           <div>
+             <div class="info_icon">
+               <img src="./img/icons/cantine.png" alt="">
+             </div>
+             <p class="tool_name">Cantine</p>
+           </div>
+
+           <div>
+             <div class="info_icon">
+               <img src="./img/icons/ticket resto.png" alt="">
+             </div>
+             <p class="tool_name">Tickets restaurant</p>
+           </div>
+
+           <div>
+             <div class="info_icon">
+               <img src="./img/icons/horaire.png" alt="">
+             </div>
+             <p class="tool_name">Horaires d'ouverture</p>
+           </div>
+         </div>
+         <div class="team-container secondline">
+           <div>
+             <div class="info_icon sport_button">
+               <img src="./img/icons/sport.png" alt="">
+             </div>
+             <p class="tool_name">Salle de sport</p>
+           </div>
+
+           <div>
+             <div class="info_icon">
+               <img src="./img/icons/loft.png" alt="">
+             </div>
+             <p class="tool_name">Salle de repos</p>
+           </div>
+         </div>
+       </div>
+
+    </div>
+  </div>
+
+  <div class="tool_preview mail_preview">
+    <h2>MAIL</h2>
+    <p class="p1">Hey Alexandre !
+Bienvenue dans la messagerie OnePoint !
+Ici, tu auras accès à tous les contacts de ton équipe et de l’entreprise (même avec une petite photo pour les reconnaître)
+Tu recevras automatiquement une notification lorsque tu recevras un mail, dont’ worry  !
+</p>
+
+    </br>
+
+    <p class="p2">Clique juste en-dessous pour commencer l’aventure et activer ta messagerie !</p>
+
+    <div class="go_mail">ACCÉDER AUX MAILS</div>
+  </div>
+
+  <div class="tool_preview livret_preview">
+    <h2 class="yellow">LIVRET D'ACCUEIL</h2>
+    <p class="p1">Hey Alexandre !
+Tu veux connaître les endroits sympa à coté de OnePoint pour déjeuner ou prendre une petite bière après le boulot ?
+C’est ici que ça se passe ! L'équipe te conseille les meilleurs restos, bars, cafés, les plus sympas du coin !
+</p>
+
+    </br>
+
+    <p class="p2">On se voit donc ce soir au Frog XVI 😉</p>
+    <div class="go_livret">TÉLÉCHARGER LE LIVRET</div>
+  </div>
+
+  <div class="tool_preview sport_preview">
+    <h2 class="purple">SALLE DE SPORT</h2>
+    <p class="p1">Hey, Alexandre !
+Je sais pas si tu es au courant mais chez OnePoint tu as même accès à une salle de sport (Gratuite 😉  ) !
+Donc si tu veux te défouler et pousser de la fonte après tes 10 000 lignes de codes, oui OnePoint à pensé a toi et c’est au 1er étage que ça se passe !
+!</p>
+
+    </br>
+
+    <p class="p2">Clique juste en-dessous pour avoir ta carte et viens nous voir dès ce soir </p>
+
+    <div class="go_sport">OBTENIR MA CARTE</div>
+  </div>
+
+  <!-- Messagerie -->
+  <div id="Mail" class="tabcontent">
+    <div class="other-content">
+      <div class="messenger">
+        <div class="messenger_conv">
+
+          <ul class="tabs">
+
+            <li>
+              <a href="#main_RH">
+                <div class="messenger_conv_RH">
+                  <img src="img/team/anouk.png" alt="">
+                  <p>Anouk - DRH</p>
+                </div>
+              </a>
+            </li>
+
+
+            <li>
+              <a href="#main_welcome">
+                <div class="messenger_conv_welcome">
+                  <div class="blue_circle"></div>
+                  <p>Bienvenue chez One Point !</p>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="messenger_main">
+
+          <h2 class="content_title"><span class="blue">MESSAGERIE</span> ONE POINT</h2>
+
+          <div id="main_RH" class="tab_content">
+            <div class="messenger_main_recieved">
+              <div class="msg">
+                <p class="message">Salut ! N'oublie pas ton rendez-vous chez le medecin du travail, c'est obligatoire pour tous les nouveaux arrivants chez One Point !</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="main_welcome" class="tab_content">
+            <div class="messenger_main_recieved">
+              <div class="msg">
+                <p class="message">Hey, bienvenue chez One Point ! Je te propose de te balader sur Datapoint pour découvrir des choses sur l'entreprise ;)
+
+                </br/>En tout cas, n'hésite pas à poser des questions et j'y répondrai du mieux que je peux !</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="messenger_main_footer">
+            <textarea placeholder=" " id="txt"></textarea>
+            <button type="submit" class="submit">Envoyer</button>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="waveWrapper waveAnimation">
+
+    <div class="waveWrapperInner bgMiddle">
+      <div class="wave waveMiddle" style="background-image: url('img/waves/wave2.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('img/waves/wave1.png')"></div>
+    </div>
+  </div>
+
+
+  <div class="popData">
+    <div class="popData_tab">
+      <div>
+        <p>CHANGE</p>
+      </div>
+      <div>
+        <p>CONSEIL</p>
+      </div>
+      <div class="dev_tab">
+        <p>DEV</p>
+      </div>
+      <div>
+        <p>MOA</p>
+      </div>
+      <div>
+        <p>CP</p>
+      </div>
+      <div>
+        <p>INFRA</p>
+      </div>
+      <div>
+        <p>QL</p>
+      </div>
+    </div>
+
+    <div id="Dev">
+
+      <div class="dev_age">
+        <h3><span class="blue">RÉPARTITION PAR AGE</span> EN DEVELOPPEMENT</h3>
+        <img src="img/bubble.png" alt="">
+      </div>
+
+      <div class="dev_parity">
+          <h3><span class="blue">PARITÉ</span> EN DEVELOPPEMENT</h3>
+          <div class="dev_parity_chart">
+        <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+
+        <div class="dev_code">
+          <h3><span class="blue">NOMBRE DE LIGNES DE CODE</span> PAR JOUR</h3>
+          <p class="dev_code_number">15248</p>
+          <p class="dev_code_text">lignes de code</p>
+          <p class="dev_code_legend">Évolution déterminée par rapport à la moyenne du jour précédent</p>
+        </div>
+
+      <div class="dev_people">
+          <h3><span class="blue">% DE DEVELOPPEURS</span> DANS L'ENTREPRISE</h3>
+          <img src="img/people.png" alt="">
+          <img src="" alt="">
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<script src="./js/message.js" charset="utf-8"></script>
+<script src="./js/Chart.min.js" charset="utf-8"></script>
+<script src="./js/script.js" charset="utf-8"></script>
+<script src="./js/chart_test.js" charset="utf-8"></script>
+<script src="./js/chart_popup.js" charset="utf-8"></script>
+
+</html>

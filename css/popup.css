@@ -1,0 +1,147 @@
+/* Div popup */
+.popData{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateX(100%);
+
+  height: 100vh;
+  width: 70%;
+
+  background-color: rgba(255, 255, 255);
+
+  display: flex;
+}
+
+.isActive{
+  animation: appearRight 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* Fake menu */
+.popData_tab{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 5%;
+
+  position: absolute;
+  top: 0;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.popData_tab > div{
+  border-right: 1px solid white;
+  background-color: lightgrey;
+
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.popData_tab > div > p{
+  text-align: center;
+  color: grey;
+}
+
+.dev_tab{
+  background-color: inherit !important;
+}
+
+.dev_tab > p{
+    color: black !important;
+}
+
+
+#Dev{
+  display: flex;
+  flex:1;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+
+  margin-top: 5%;
+  width: 100%;
+  height: 95%;
+}
+
+#Dev > div{
+  box-shadow: 1px 1px 15px -1px rgba(0,0,0,0.30);
+  width: 47%;
+  height: 45%;
+  margin: 1%;
+
+  position: relative;
+}
+
+#Dev > div > h3{
+  position: relative;
+  top: 2%;
+  left: 2%;
+}
+
+.dev_age > img{
+  position: absolute;
+  top: -6%;
+  left: 10%;
+  width: 80%;
+  height: auto;
+}
+
+.dev_parity_chart{
+  width: 55%;
+
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 6%;
+}
+
+.dev_code{
+  position: relative;
+}
+
+.dev_code_number{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  font-size: 100px;
+  color: rgba(103, 189, 232);
+}
+
+.dev_code_text{
+  position: absolute;
+  left: 50%;
+  top: 63%;
+  transform: translate(-50%,-50%);
+  color: grey;
+}
+
+.dev_code_legend{
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translate(-50%,-50%);
+
+  font-size: 14px;
+  width: 65%;
+
+  color: grey;
+}
+
+.dev_people > img{
+  width: 80%;
+  height: auto;
+
+  position: absolute;
+  top: -5%;
+  left: 10%;
+}

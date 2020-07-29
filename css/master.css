@@ -1,0 +1,690 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+html{
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: rgba(247, 248, 249);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.tabcontent {
+    display: none;
+    animation: fadeEffect 0.5s;
+    width: 90%;
+    height: 100vh;
+    z-index: 3;
+    position: relative;
+    left: 10%;
+
+}
+
+
+.black{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.blue{
+  color: rgba(103, 189, 232) !important;
+}
+
+.yellow{
+  color: rgba(250, 219, 143) !important;
+}
+
+.purple{
+  color: rgba(219, 107, 107) !important;
+}
+
+.appear{
+  display: block !important;
+  animation: fadeEffect 1s;
+}
+
+.disappear{
+  display: none !important;
+}
+
+
+button{
+  cursor: pointer;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+
+/* Logo One Point */
+.logoSite{
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+
+  width: 170px;
+}
+/**/
+
+
+/* Boutons Selects */
+select{
+  text-align-last:center;
+}
+
+.select-style{
+  position: relative;
+  left: 20%;
+  margin-top: 1%;
+  z-index: 10;
+
+  width: 130px;
+  height: 30px;
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.select-style2{
+  position: absolute;
+  left: 60%;
+  top: 1%;
+  z-index: 10;
+
+  width: 200px;
+  height: 30px;
+  overflow: hidden;
+}
+
+#choice1{
+    padding: 5px 8px;
+    width: 110%;
+    border: none;
+    box-shadow: none;
+    background: rgba(134, 198, 234);
+    background-image: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#choice2{
+    padding: 5px 8px;
+    width: 110%;
+    border: none;
+    box-shadow: none;
+    background: rgba(134, 198, 234);
+    background-image: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+/**/
+
+
+/* Header */
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+
+  background-color: rgba(103, 189, 232);
+}
+
+header p{
+  color: white;
+}
+
+.logoData{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+
+.dashboard_profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.profilePic{
+  width: 150px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 20%;
+}
+
+.profile_name{
+  margin-top: 7%;
+}
+
+.profile_name p{
+  text-align: center;
+  font-size: 16px;
+}
+
+.profile_name_job{
+  font-weight: lighter !important;
+  font-size: 14px !important;
+}
+
+.progress_bar{
+  margin-top: 10%;
+  align-self: center;
+  width: 70%;
+}
+
+.progress_bar:hover{
+  cursor: pointer;
+}
+
+.meter {
+  margin-top: 2px;
+	height: 12px;
+	position: relative;
+	background: #DCE0E3;
+  border-radius: 20px;
+}
+
+.meter > span {
+	display: block;
+	height: 100%;
+	           border-top-right-radius: 8px;
+	        border-bottom-right-radius: 8px;
+	            border-top-left-radius: 20px;
+	         border-bottom-left-radius: 20px;
+	position: relative;
+	overflow: hidden;
+}
+.meter > span:after {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+  background-color: white;
+	overflow: hidden;
+}
+
+.progress_bar_title{
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.toolbar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.toolbar > button{
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.toolbar button:hover {
+    background-color: rgba(68, 171, 238);
+}
+
+.toolbar button.active {
+    background-color: rgba(68, 171, 238);
+    border-bottom: none;
+    color: white;
+    font-weight: bold;
+    border-left: 2px solid white;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.toolbar > button > div{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.toolbar > button > div > img{
+  margin: 10px;
+  height: 25px;
+}
+
+.mail_notification{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  margin-left: 20%;
+}
+/* Search */
+.search{
+  width: 100%;
+  height: 100px;
+
+  position: absolute;
+  top: 0;
+}
+/**/
+
+/* Home */
+#Home{
+  position: relative;
+  left: 5%;
+}
+
+.widgets{
+  width: 24%;
+  height: 86.5vh;
+
+  position: absolute;
+  left: 20%;
+  top: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.widgets > div{
+  background-color: white;
+  opacity: 0.7;
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 19px -1px rgba(0,0,0,0.30);
+  height: 32%;
+}
+
+.widgets > div > h2{
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.widgets_parity > h2{
+  margin-bottom: 2%;
+}
+
+.parity_chart{
+  width: 52%;
+  margin: auto;
+}
+
+/* Chart Effectif */
+.widgets_workforce{
+  position: relative;
+}
+
+.widgets_workforce_number{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  font-size: 100px;
+}
+
+.widgets_workforce_text{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%,-50%);
+}
+
+.widgets_workforce_legend{
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translate(-50%,-50%);
+
+  font-size: 10px;
+  width: 60%;
+
+  color: grey;
+}
+/**/
+
+
+.chart{
+  width: 50%;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 5px;
+  box-shadow: 2px 2px 19px -1px rgba(0,0,0,0.30);
+
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.between_select{
+  position: absolute;
+  top: 1%;
+  left: 45%;
+}
+
+.chart > canvas{
+  padding: 10px;
+}
+
+.chart_container{
+  height: 83vh;
+  width: 90%;
+  margin: auto;
+}
+
+.chart_container:hover{
+  cursor: pointer;
+}
+
+/**/
+
+
+
+
+/* Team One Point */
+.other-content{
+  position: relative;
+  width: 80%;
+  height: 90%;
+  top: 3%;
+  left: 12%;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: 2px 2px 19px -1px rgba(0,0,0,0.30);
+}
+
+.content_title{
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.mateam{
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+
+}
+
+.lateam{
+  position: absolute;
+    display: none;
+
+  height: 100%;
+  width: 100%;
+
+    overflow-y: scroll;
+}
+
+#Team > input{
+  position: absolute;
+  top: 0;
+  left: 10%;
+
+  z-index: 1000;
+}
+
+.content_undertitle{
+  font-size: 16px;
+  font-style: italic;
+  color: grey;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.team-container{
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.firstline{
+  position: absolute;
+  top: 20%;
+}
+
+.secondline{
+  position: absolute;
+  top: 55%;
+}
+
+.thirdline{
+  position: absolute;
+  top: 90%;
+  margin-bottom: 10%;
+}
+
+.img-container img{
+  border-radius: 50%;
+}
+
+.team-container img{
+  width: 150px;
+  margin-bottom: 10%;
+}
+
+.person_name{
+  text-align: center;
+}
+
+.person_job{
+  text-align: center;
+  font-size: 12px;
+  font-weight: lighter;
+  color: grey;
+}
+
+.person5_profilePic img{
+  border: 5px solid rgba(250, 219, 143);
+}
+
+.person5_profilePic_alt img{
+  border: 5px solid rgba(117, 181, 232);
+}
+
+
+/**/
+
+/* Lieux de vie */
+.places_map{
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  margin-top: 3%;
+}
+
+.iframe_map{
+  position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 93%;
+ border: 0;
+}
+/**/
+
+/* Tools */
+
+.tool_icon{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  margin-bottom: 5%;
+
+  position: relative;
+
+  border: 1px solid rgba(117, 181, 232);
+  background-color: rgba(117, 181, 232, 0.5);
+}
+
+.doc_icon{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  margin-bottom: 5%;
+
+  position: relative;
+
+  border: 1px solid rgba(250, 219, 143);
+  background-color: rgba(250, 219, 143, 0.5);
+}
+
+.info_icon{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  margin-bottom: 5%;
+
+  position: relative;
+
+  border: 1px solid rgba(219, 107, 107);
+  background-color: rgba(219, 107, 107, 0.5);
+}
+
+.tool_icon img, .doc_icon img, .info_icon img{
+  width: auto;
+  height: 70%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tool_name{
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/**/
+
+/* slider tools */
+.slick-slide{
+  height: 90vh !important;
+  position: relative;
+}
+
+.slideshow{
+  visibility: hidden;
+}
+.slick-initialized {
+  visibility: visible;
+}
+/**/
+
+#container {
+	width: 160px;
+	height: 36px;
+	margin: auto;
+	position: absolute;
+  top: 6%;
+  right: 10%;
+	border-radius: 6px;
+	overflow: hidden;
+	user-select: none;
+	cursor: pointer;
+  z-index: 1000;
+}
+
+.inner-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: inherit;
+	height: inherit;
+	text-transform: uppercase;
+	font-size: .6em;
+	letter-spacing: .2em;
+}
+
+.inner-container:first-child {
+	background: #e9e9e9;
+	color: #a9a9a9;
+}
+
+.inner-container:nth-child(2) {
+	background: rgba(250, 219, 143);
+	color: white;
+	clip-path: inset(0 50% 0 0);
+	transition: .3s cubic-bezier(0,0,0,1);
+}
+
+.toggle {
+	width: 50%;
+	position: absolute;
+	height: inherit;
+	display: flex;
+	box-sizing: border-box;
+}
+
+.toggle p {
+	margin: auto;
+}
+
+.toggle:nth-child(1) {
+	right: 0;
+}
+
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes appearRight {
+  from { transform : translateX(100%)}
+  to   { transform : translateX(0%)}
+}

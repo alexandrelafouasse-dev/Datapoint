@@ -1,0 +1,44 @@
+{
+  "datasets" : [{
+    "poste" : {
+      "labels" : ["ASSOCIATE", "LEADER", "PARTNER"],
+      "percent_m" : [72, 75, 94],
+      "percent_f" : [28, 25, 6],
+      "age" : [36, 42, 47],
+      "effectif" : [714, 60, 17]
+    },
+
+    "metier" : {
+      "labels" : ["CHANGE", "CONSEIL" , "CP", "DEV", "INFRA", "MOA", "QL"],
+      "percent_m" : [64, 67, 79, 86, 98, 78, 84],
+      "percent_f" : [36, 33, 21, 14, 2, 22, 16],
+      "age" : [30, 33, 38, 32, 41, 37, 42],
+      "effectif" : [22, 131, 77, 232, 154, 61, 53]
+    },
+
+    "comm_metier" : {
+      "labels" : ["Banque Finance Assurance", "Industrie Distribution Energie", "MultiMétiers", "Secteur Public",  "Service Média Telecom"],
+      "percent_m" : [75, 72, 72, 62, 77],
+      "percent_f" : [25, 28, 28, 38, 23],
+      "age" : [40, 35, 33, 36, 36],
+      "effectif" : [279, 109, 209, 29, 43]
+    },
+
+    "comm_service" :{
+      "labels" : ["Accompagnement", "AgileLean", "Architecture", "BiBigData", "CloudOperation&System", "DigitalExperience", "ExpertiseMetier", "GenieLogiciel", "Howard", "ManagementInnovation", "ProcessusRiskCompliance", "Qualification&Testing", "Sécurité", "Solutions", "StratIT&ArchiEntreprise"],
+      "percent_m" : [37, 75, 94, 80, 94, 43, 58, 86, 55, 71, 67, 63, 100, 64],
+      "percent_f" : [63, 25, 6, 20, 6, 57, 42, 14, 45, 29,  33, 37, 0, 36],
+      "age" : [32, 38, 44, 35, 41, 30, 36, 34, 28, 31, 34, 42, 34, 28, 36],
+      "effectif" : [27, 20, 16, 10, 143, 14, 105, 188, 11, 7, 18, 57, 5, 55, 22]
+    },
+
+    "dev" : {
+      "parity" : [60, 40]
+    },
+
+    "all" : {
+      "parity": [73, 27]
+    }
+
+  }]
+}
